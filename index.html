@@ -414,6 +414,11 @@
     document.getElementById('adj-minus').onclick = () => { state.offset -= 100; save(); };
     document.getElementById('adj-plus').onclick = () => { state.offset += 100; save(); };
 
+    //Helpページ
+    document.getElementById('help-btn').onclick = () => {
+        window.location.href = 'help.html';
+    };
+
     // --- ストレージ ---
     function save() { localStorage.setItem('rally_state', JSON.stringify(state)); }
     function load() {
@@ -425,6 +430,8 @@
         }
     }
 
+    
+
     // 起動
     load();
     update();
@@ -433,5 +440,6 @@
 </body>
 
 </html>
+
 
 
